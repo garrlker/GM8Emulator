@@ -87,7 +87,7 @@ pub fn rgb_to_hsv(color: i32) -> (i32, i32, i32) {
             h = (Real::from(60) * ((r - g) / diff) + Real::from(240)) % Real::from(360)
         }
     }
-    (((h / Real::from(360)) * Real::from(255)).round(), (s * Real::from(255)).round(), v.round())
+    (((h / Real::from(360)) * Real::from(0xFF)).round(), (s * Real::from(0xFF)).round(), v.round())
 }
 
 impl Game {
